@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PostPage  } from '../../pages/post/post';
 import { InfoPage  } from '../../pages/info/info';
+import { HotlinePage  } from '../../pages/hotline/hotline';
 
 @Component({
   selector: 'page-home',
@@ -67,6 +68,10 @@ export class HomePage {
 
   itemSelected(item) {
     this.navCtrl.push(InfoPage, { item });
+  }
+
+  goToHotline() {
+    this.navCtrl.push(HotlinePage);
   }
 
 }

@@ -6,7 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <div class="search-container">
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     <!--<button ion-button color="blue" outline icon-only (click)="openPostPage()">-->
@@ -48,6 +48,8 @@
         </ion-row>
       </ion-grid>
     </section>
+
+    <button ion-button color="dark" full outline (click)="goToHotline()">HOTLINE</button>
   </ng-template>
 
 </ion-content>

@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PostPage } from '../pages/post/post';
 import { InfoPage } from '../pages/info/info';
+import { HotlinePage } from '../pages/hotline/hotline';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     PostPage,
-    InfoPage
+    InfoPage,
+    HotlinePage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { InfoPage } from '../pages/info/info';
     MyApp,
     HomePage,
     PostPage,
-    InfoPage
+    InfoPage,
+    HotlinePage
   ],
   providers: [
     StatusBar,
