@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{item.name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <img src="http://remezcla.com/wp-content/uploads/2017/02/street-vendors-la_culture.jpg?x28508" />
+    <ion-card-content>
+    <ion-card-title>
+      <span>{{item.name}}</span>
+      <ion-item>
+        <button ion-button clear icon-only>
+          <ion-icon name="ios-star" color="dark" id="one-star" is-active="true"></ion-icon>
+        </button> 
+        <button ion-button clear icon-only>
+          <ion-icon name="ios-star" color="dark" id="one-star" is-active="true"></ion-icon>
+        </button>
+        <button ion-button clear icon-only>
+          <ion-icon name="ios-star" color="dark" id="two-star" is-active="true"></ion-icon>
+        </button>
+        <button ion-button clear icon-only>
+          <ion-icon name="ios-star-outline" color="dark" id="three-star" is-active="true"></ion-icon>
+        </button>
+        <button ion-button clear icon-only>
+          <ion-icon name="ios-star-outline" color="dark" id="four-star" is-active="true"></ion-icon>
+        </button> 
+      </ion-item>
+    </ion-card-title>
+      <p>{{item.bio}}</p>
+      <ion-row>
+        <ion-col>
+          <img src="http://www.destination360.com/north-america/us/california/los-angeles/omni-los-angeles-hotel-at-california-plaza-map.gif" />
+        </ion-col>
+        <ion-col>
+          <ion-thumbnail><img src="http://remezcla.com/wp-content/uploads/2017/02/street-vendors-la_culture.jpg?x28508" /></ion-thumbnail>
+        </ion-col>
+        <ion-col>
+          <ion-thumbnail><img src="http://remezcla.com/wp-content/uploads/2017/02/street-vendors-la_culture.jpg?x28508" /></ion-thumbnail>
+        </ion-col>
+        <ion-col>
+          <ion-thumbnail><img src="http://remezcla.com/wp-content/uploads/2017/02/street-vendors-la_culture.jpg?x28508" /></ion-thumbnail>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>

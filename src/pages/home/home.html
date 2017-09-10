@@ -1,14 +1,53 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      A LA Carte
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="search-container">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <!--<button ion-button color="blue" outline icon-only (click)="openPostPage()">-->
+      <!--<ion-icon name='md-add-circle' is-active="true"></ion-icon>-->
+    <!--</button>-->
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{ item.search }}
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <section *ngIf="searchTerm; else chosen">
+    <ion-list>
+      <ion-item *ngFor="let item of filteredItems" (click)="itemSelected(item)">
+        <ion-thumbnail item-start>
+          <img src="http://intersectionssouthla.org/wp-content/uploads/2014/03/599.jpg">
+        </ion-thumbnail>
+        <h2>
+          {{item.name}}
+          <i *ngIf="item.online" class="online-marker">&nbsp;</i>
+        </h2>
+        <p>{{item.bio}}</p>
+      </ion-item>
+    </ion-list>
+  </section>
+
+  <ng-template #chosen>
+    <section padding *ngFor="let section of sections">
+      <h2 class="title">{{section.title}}</h2>
+      <ion-grid>
+        <ion-row>
+        <ion-col *ngFor="let item of this[section.key]" (click)="itemSelected(item)">
+            <div>
+              <img src="http://intersectionssouthla.org/wp-content/uploads/2014/03/599.jpg" alt="{{item.name}}" />
+            </div>
+            <button ion-button full color="dark">{{item.name}}</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+  </ng-template>
+
 </ion-content>
