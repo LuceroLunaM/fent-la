@@ -25,7 +25,14 @@ page-home {
   }
 
   section {
+    .col > div {
+      position: relative;
+      height: 0;
+      padding-bottom: 100%;
+    }
     img {
+      position: absolute;
+      height: 100%;
       border: 1px solid #000;
       border-radius: 5px;
     }

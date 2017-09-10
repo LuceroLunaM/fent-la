@@ -23,7 +23,7 @@
     <ion-list>
       <ion-item *ngFor="let item of filteredItems" (click)="itemSelected(item)">
         <ion-thumbnail item-start>
-          <img src="http://intersectionssouthla.org/wp-content/uploads/2014/03/599.jpg">
+          <img src="{{item.image}}">
         </ion-thumbnail>
         <h2>
           {{item.name}}
@@ -41,7 +41,7 @@
         <ion-row>
         <ion-col *ngFor="let item of this[section.key]" (click)="itemSelected(item)">
             <div>
-              <img src="http://intersectionssouthla.org/wp-content/uploads/2014/03/599.jpg" alt="{{item.name}}" />
+              <img src="{{item.image}}" alt="{{item.name}}" />
             </div>
             <button ion-button full color="dark">{{item.name}}</button>
           </ion-col>
